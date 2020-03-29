@@ -1,22 +1,56 @@
 
 .portfolio
-  height: 100vh
-  width: 100vw
+  height: 100%
+  width: 100%
   position: relative
-  &__bg-1
-    position: absolute
-    width: 100%
+  .bg
     height: 100%
-    z-index: 1
-    background: #5276ff
-  &__bg-2
+    width: 100%
     position: absolute
-    right: -284px
     z-index: 1
-    top: -23px
-    height: 97%
-    background: white
-    width: 740px
-    border-radius: 200px
-    transform: rotate(43deg)
+  .intro
+    height: 100%
+    width: 100%
+    z-index: 2
+    align-items: top
+    justify-content: center
+    position: relative
+    display: flex
+    &__1
+      flex: 1
+      img
+        height: 20%
+
+      .title
+        color: white
+        font-size: 3em
+        font-weight: 600
+        padding: 20px
+
+    &__2
+      flex: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      .js
+        height: 10%
+        margin-bottom: 50px
+      .angular
+        height: 8%
+        margin: 0 25px 40px 36px
+
+  .section
+    width: 100%
+
+
+.heading
+  height: 50px
+  color: white
+  padding: 20px
+  display: flex
+  align-items: center
+  font-size: 2em
+  background: #c000f0
+.content
+  padding: 10px
 
