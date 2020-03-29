@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/angular2-multiselect-dropdown/themes/default.theme.css'
-body
+
+
+$font-family: 'Open Sans','Source Sans Pro', 'Poppins', Helvetica, Tahoma
+
+*
   margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: $font-family
+  -webkit-user-select: text
+  -moz-user-select: text
+  -ms-user-select: text
+  user-select: text
+  -webkit-font-smoothing: antialiased
+  ::-webkit-scrollbar
+    width: 6px
+    height: 6px
+    // background-color: transparentize(grey, 0.9)
+  ::-webkit-scrollbar-thumb
+    width: 6px
+    border-radius: 10px
+    background-color: var(--primaryLighterTransparentize)
+
+body
+  overflow: hidden
+\:root
+  --primary: rgb(98, 136, 255)
+  --accent: rgb(136, 136, 136)
+  --warning: rgb(204, 0, 0)
+  --primaryLighter: rgb(128, 152, 226)
+  --primaryDarken: rgb(63, 109, 247)
+  --primaryLighterTransparentize: rgba(128, 152, 226, 0.8)
+  --textColorHover: rgb(255, 255, 255)
+  --cardBoxShadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)
+  --title: #476282
+  --border: #dbdbdb
+  --dynamicBackground: #f6f7f9
+  --cardBackground: white
