@@ -11,11 +11,9 @@ export class DynamicContentComponent implements OnInit {
 
   ngOnInit(): void {
     document.querySelector('.dynamic').addEventListener('scroll', () => {
-      const sections = document.getElementsByClassName('section');
+      const sections = document.getElementsByClassName('heading');
+        console.log(sections[0]['offsetTop']);
 
-      for (let i = 0; i < sections.length; i++) {
-       // console.log(sections[i]['offsetTop']);
-      }
     });
   }
 
