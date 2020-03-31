@@ -6,7 +6,7 @@
   </div>
 
   <ng-container *ngFor="let action of actions">
-    <div (click)="actionChanged($event, action.name)" class="action" [routerLinkActive]="['selected']"
-      [routerLink]="action.route">{{ action.name}}</div>
+    <div (click)="actionChanged($event, action.id)" class="action" [class.selected] = "action.id === selectedAction"
+      >{{ action.name}}</div>
   </ng-container>
 </div>

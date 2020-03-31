@@ -8,6 +8,7 @@ import { SideNavigationComponent } from './sections/home/side-navigation/side-na
 import { DynamicContentComponent } from './sections/home/dynamic-content/dynamic-content.component';
 import { LoginComponent } from './sections/login/login.component';
 import { HomeComponent } from './sections/home/home.component';
+import * as $ from 'jquery';
 
 
 @NgModule({

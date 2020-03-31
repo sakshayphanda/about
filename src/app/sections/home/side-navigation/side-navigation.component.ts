@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { GlobalDataService } from 'src/app/services/global-data.service';
 
 @Component({
   selector: 'app-side-navigation',
@@ -10,57 +11,64 @@ export class SideNavigationComponent implements OnInit {
 
   productsInCart = {};
   userData = {};
-  selectedAction = 'Home';
+  selectedAction = '';
   actions = [];
 
   constructor(
+    private globalData: GlobalDataService
     ) {
    }
 
   ngOnInit() {
     this.initialiseActions();
+    this.globalData.selectedAction.subscribe(
+      action => {
+        this.selectedAction = action;
+      }
+    );
   }
 
   initialiseActions() {
     this.actions = [
       {
-        name: 'About',
-        route: '/home',
-        auth: 'no'
+        id: 'about',
+        name: 'About'
       }, {
-        name: 'Experience',
-        route: '/cart',
-        auth: 'no'
+        id: 'experience',
+        name: 'Experience'
+
       }, {
-        name: 'Projects',
-        route: '/check-out',
-        auth: 'no'
+        id: 'projects',
+        name: 'Projects'
+
       }, {
-        name: 'Skills',
-        route: '/my-orders',
-        auth: 'no'
+        id: 'skills',
+        name: 'Skills'
       }, {
-        name: 'Awards',
-        route: '/admin/admin-orders',
-        auth: 'admin'
+        id: 'awards',
+        name: 'Awards'
+
       }, {
-        name: 'Education',
-        route: '/admin/admin-products',
-        auth: 'admin'
+        id: 'education',
+        name: 'Education'
+
       }, {
-        name: 'Contact',
-        route: '/admin/admin-products',
-        auth: 'admin'
+        id: 'contact',
+        name: 'Contact'
       }, {
-        name: 'Resume',
-        route: '/admin/admin-products',
-        auth: 'admin'
+        id: 'resume',
+        name: 'Resume'
       }
     ];
   }
 
-  actionChanged($event, name) {
+  actionChanged($event, id) {
     $event.stopPropagation();
-    this.selectedAction = name;
+   // this.selectedAction = id;
+    console.log(document.querySelector('#' + id));
+    $('.dynamic').animate({
+      scrollTop: document.querySelector('#' + id)[`offsetTop`]
+    }, 1000);
+   // document.querySelector('.dynamic').scrollTop = document.querySelector('#' + id)[`offsetTop`];
   }
 }
