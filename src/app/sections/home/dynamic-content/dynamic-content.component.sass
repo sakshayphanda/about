@@ -2,25 +2,13 @@
 .portfolio
   height: 100%
   width: 100%
-  position: relative
-  .bg
-    height: 100%
-    width: 100%
-    position: absolute
-    z-index: 1
+  background-image: url('../../../../assets/sky.jpg')
+  background-size: cover
   .intro
     height: 100%
     width: 100%
-    z-index: 2
-    align-items: top
-    justify-content: center
-    position: relative
-    display: flex
     &__1
-      flex: 1
-      img
-        height: 20%
-
+      height: 200px
       .title
         color: white
         font-size: 3em
@@ -28,19 +16,30 @@
         padding: 20px
 
     &__2
-      flex: 1
+      height: calc( 100% -  200px)
       display: flex
-      align-items: center
       justify-content: center
-      .js
-        height: 10%
-        margin-bottom: 50px
-      .angular
-        height: 8%
-        margin: 0 25px 40px 36px
+      align-items: center
+      .image-container
+        width: 100%
+        height: 90%
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        flex-wrap: wrap
+        img
+          clip-path: circle()
+          height: 8em
+          margin: 10px
+          // transition: all 2s ease-in-out
+          &:hover
+            animation: 5s linear rotate infinite
+            // transform: rotate(360deg)
 
   .sec
     width: 100%
+    .content
+      padding: 10px
     .heading
       height: 60px
       color: white
@@ -73,8 +72,8 @@
     background: var(--color-green)
 
 
-
-.content
-  .heading
-    padding: 10px
-
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
