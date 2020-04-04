@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  showMenuButton = false;
+  showSideMenu = true;
   constructor() { }
 
   ngOnInit(): void {
+    if(window.innerWidth < 900) {
+      this.showMenuButton = true;
+      this.showSideMenu = false;
+    } else {
+      this.showMenuButton = false;
+      this.showSideMenu = true;
+    }
+
+    window.addEventListener('resize', (ev) => {
+      console.log(ev);
+
+      if(ev[`target`][`innerWidth`] < 900) {
+        this.showMenuButton = true;
+        this.showSideMenu = false;
+      } else {
+        this.showMenuButton = false;
+        this.showSideMenu = true;
+      }
+    });
   }
 
 }

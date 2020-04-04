@@ -6,7 +6,9 @@
   </div>
 
   <ng-container *ngFor="let action of actions">
-    <div (click)="actionChanged($event, action.id)" class="action" [class.selected] = "action.id === selectedAction"
-      >{{ action.name}}</div>
+    <div (click)="actionChanged($event, action.id)" class="action" [class.selected] = "action.id === selectedAction">
+      <span class="material-icons">
+        {{action.icon}}
+        </span>{{ action.name}}</div>
   </ng-container>
 </div>

@@ -32,32 +32,40 @@ export class SideNavigationComponent implements OnInit {
     this.actions = [
       {
         id: 'about',
-        name: 'About'
+        name: 'About',
+        icon: 'account_circle'
       }, {
         id: 'experience',
-        name: 'Experience'
+        name: 'Experience',
+        icon: 'show_chart'
 
       }, {
         id: 'projects',
-        name: 'Projects'
+        name: 'Projects',
+        icon: 'developer_board'
 
       }, {
         id: 'skills',
-        name: 'Skills'
+        name: 'Skills',
+        icon: 'bar_chart'
       }, {
         id: 'awards',
-        name: 'Awards'
+        name: 'Awards',
+        icon: 'star'
 
       }, {
         id: 'education',
-        name: 'Education'
+        name: 'Education',
+        icon: 'menu_book'
 
       }, {
         id: 'contact',
-        name: 'Contact'
+        name: 'Contact',
+        icon: 'call'
       }, {
         id: 'resume',
-        name: 'Resume'
+        name: 'Resume',
+        icon: 'description'
       }
     ];
   }

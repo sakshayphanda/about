@@ -1,7 +1,12 @@
-
-<div id="side" class="side-navigation">
+<div id="side" class="side-navigation" *ngIf="showSideMenu">
   <app-side-navigation></app-side-navigation>
 </div>
 <div class="dynamic">
   <router-outlet></router-outlet>
+</div>
+
+<div class="menu-button" *ngIf="showMenuButton" (click) = "showSideMenu = !showSideMenu">
+  <span class="material-icons">
+    menu
+  </span>
 </div>

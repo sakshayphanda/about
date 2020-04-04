@@ -9,11 +9,17 @@
     width: 100%
     &__1
       height: 200px
+      display: flex
+      align-items: center
+      flex-direction: column
       .title
         color: white
         font-size: 3em
         font-weight: 600
         padding: 20px
+      .short-desc
+        font-size: 1.5rem
+        color: white
 
     &__2
       height: calc( 100% -  200px)
@@ -31,10 +37,8 @@
           clip-path: circle()
           height: 8em
           margin: 10px
-          // transition: all 2s ease-in-out
           &:hover
             animation: 5s linear rotate infinite
-            // transform: rotate(360deg)
 
   .sec
     width: 100%
@@ -47,29 +51,36 @@
       display: flex
       align-items: center
       font-size: 2.2em
-      background: #c000f0
       position: sticky
       top: 0
 
 #about
   .heading
-    background: var(--color-orange)
+    background: var(--color-about)
 
 #projects
   .heading
-    background: var(--color-green)
+    background: var(--color-projects)
 
 #experience
   .heading
-    background: var(--color-purple)
+    background: var(--color-experience)
 
 #skills
   .heading
-    background: var(--color-yellow)
+    background: var(--color-skills)
 
 #education
   .heading
-    background: var(--color-green)
+    background: var(--color-education)
+
+#awards
+  .heading
+    background: var(--color-awards)
+
+#contact
+  .heading
+    background: var(--color-contact)
 
 
 @keyframes rotate
@@ -77,3 +88,22 @@
     transform: rotate(0deg)
   100%
     transform: rotate(360deg)
+
+
+@media screen and ( max-width: 900px)
+  .image-container
+    img
+      height: 7em !important
+
+@media screen and ( max-width: 700px)
+  .image-container
+    img
+      height: 6em !important
+  .title
+    font-size: 2em !important
+@media screen and ( max-width: 500px)
+  .image-container
+    img
+      height: 5.5em !important
+  .title
+    font-size: 2em !important
