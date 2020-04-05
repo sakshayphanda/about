@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalDataService } from 'src/app/services/global-data.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,9 @@ export class HomeComponent implements OnInit {
 
   showMenuButton = false;
   showSideMenu = true;
-  constructor() { }
+  constructor(
+    private globalData: GlobalDataService
+  ) { }
 
   ngOnInit(): void {
     if(window.innerWidth < 900) {
@@ -19,6 +22,17 @@ export class HomeComponent implements OnInit {
       this.showMenuButton = false;
       this.showSideMenu = true;
     }
+
+
+    this.globalData.toggleSideMenu.subscribe(
+      response => {
+        if(window.innerWidth < 900) {
+        this.showSideMenu = !this.showSideMenu;
+        }
+      }
+    );
+
+
 
     window.addEventListener('resize', (ev) => {
       console.log(ev);

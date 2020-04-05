@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from 'src/app/services/global-data.service';
+import { experiences } from 'src/app/data/experiences';
+import { IExperience } from 'src/app/interfaces/Iexperience';
+import { skills } from 'src/app/data/skills';
+import { projects } from 'src/app/data/projects';
+import { education } from 'src/app/data/education';
 
 @Component({
   selector: 'app-dynamic-content',
@@ -8,8 +13,11 @@ import { GlobalDataService } from 'src/app/services/global-data.service';
 })
 export class DynamicContentComponent implements OnInit {
 
-  experiences = [1,2,3,4,5];
-  skills = [];
+  experiences: IExperience[] = experiences;
+  skills = [] = skills;
+  projects = [] = projects;
+  education = [] = education;
+
   constructor(
     private globalData: GlobalDataService
   ) {}

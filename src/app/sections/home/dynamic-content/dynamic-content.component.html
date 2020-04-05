@@ -23,24 +23,16 @@
     <div class="content">
       <div class="card">
         <p class="text emphasize">
-          I'm a passionate Frontend developer with an Industry experience of building web applications.<br> I specialise
+          I'm a passionate Frontend developer with an Industry experience of building web applications.<br><br> I
+          specialise
           in Javascript
           and have experience working with Angular.
         </p>
 
         <ul class="text">
-          <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-          <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-          <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-            within
-            a single app</li>
-          <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-            collection
-            of high resolution wallpapers</li>
-          <li>And more..</li>
-          I have a potential to work as a team member, to listen and follow according to the task assigned to me.
+          <p>I've worked on various Frontend Projects for Web as well as Mobile Applications. <br>
+            I have a potential to work in a challenging environment and create an impact.</p>
         </ul>
-
         <p class="text">Specialities: Angular, Javascript/Typescript, HTML, CSS/SASS, jQuery, Firebase, Android using
           Core Java</p>
 
@@ -53,28 +45,24 @@
   <div class="sections" id="experience">
     <div class="heading">Experience</div>
     <div class="content">
-      <ng-container *ngFor="let exp of experiences">
+      <ng-container *ngFor="let experience of experiences">
         <div class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
                 account_circle
-              </span> HowTechWorx</div>
+              </span>
+              {{experience.companyName}}
+            </div>
           </div>
-          <div class="card__content">
-
-            <ul class="text">
-              <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-              <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-              <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-                within
-                a single app</li>
-              <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-                collection
-                of high resolution wallpapers</li>
-              <li>And more..</li>
-              I have a potential to work as a team member, to listen and follow according to the task assigned to me.
-            </ul>
+          <div class="card__content text" [innerHTML]="experience.innerHTML"></div>
+          <div class="card__footer">
+            <div class="duration text">
+              <span class="companyImage material-icons">
+                show_chart
+              </span>
+              {{experience.duration}}
+            </div>
           </div>
         </div>
       </ng-container>
@@ -85,29 +73,21 @@
   <div class="sections" id="projects">
     <div class="heading">Projects</div>
     <div class="content">
-      <ng-container *ngFor="let exp of experiences">
+      <ng-container *ngFor="let project of projects">
         <div class="card">
           <div class="card__title">
-
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
-                account_circle
-              </span> HowTechWorx</div>
+                developer_board
+              </span>
+              {{project.projectName}}
+            </div>
           </div>
-          <div class="card__content">
-
-            <ul class="text">
-              <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-              <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-              <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-                within
-                a single app</li>
-              <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-                collection
-                of high resolution wallpapers</li>
-              <li>And more..</li>
-              I have a potential to work as a team member, to listen and follow according to the task assigned to me.
-            </ul>
+          <div class="card__content text" [innerHTML]="project.innerHTML"></div>
+          <div class="card__footer">
+            <a class="duration text" [href] = "project.link" target="_blank">
+              {{project.link}}
+            </a>
           </div>
         </div>
       </ng-container>
@@ -118,30 +98,17 @@
   <div class="sections" id="skills">
     <div class="heading">Skills</div>
     <div class="content">
-      <ng-container *ngFor="let exp of experiences">
+      <ng-container *ngFor="let skill of skills">
         <div class="card">
           <div class="card__title">
-
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
-                account_circle
-              </span> HowTechWorx</div>
+                bar_chart
+              </span>
+              {{skill.name}}
+            </div>
           </div>
-          <div class="card__content">
-
-            <ul class="text">
-              <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-              <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-              <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-                within
-                a single app</li>
-              <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-                collection
-                of high resolution wallpapers</li>
-              <li>And more..</li>
-              I have a potential to work as a team member, to listen and follow according to the task assigned to me.
-            </ul>
-          </div>
+          <div class="card__content text" [innerHTML]="skill.innerHTML"></div>
         </div>
       </ng-container>
     </div>
@@ -150,61 +117,42 @@
   <div class="sections" id="awards">
     <div class="heading">Awards</div>
     <div class="content">
-      <ng-container *ngFor="let exp of experiences">
         <div class="card">
           <div class="card__title">
 
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
-                account_circle
-              </span> HowTechWorx</div>
+                star
+              </span> Letter of Appreciation</div>
           </div>
           <div class="card__content">
-
-            <ul class="text">
-              <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-              <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-              <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-                within
-                a single app</li>
-              <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-                collection
-                of high resolution wallpapers</li>
-              <li>And more..</li>
-              I have a potential to work as a team member, to listen and follow according to the task assigned to me.
-            </ul>
+            Received a letter of Appreciation from the College faculty for developing the official BVICAM app and for being a part of Android core team
           </div>
         </div>
-      </ng-container>
     </div>
   </div>
 
   <div class="sections" id="education">
     <div class="heading">Education</div>
     <div class="content">
-      <ng-container *ngFor="let exp of experiences">
+      <ng-container *ngFor="let education of education">
         <div class="card">
           <div class="card__title">
-
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
-                account_circle
-              </span> HowTechWorx</div>
+                menu_book
+              </span>
+              {{education.companyName}}
+            </div>
           </div>
-          <div class="card__content">
-
-            <ul class="text">
-              <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-              <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-              <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-                within
-                a single app</li>
-              <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-                collection
-                of high resolution wallpapers</li>
-              <li>And more..</li>
-              I have a potential to work as a team member, to listen and follow according to the task assigned to me.
-            </ul>
+          <div class="card__content text" [innerHTML]="education.innerHTML"></div>
+          <div class="card__footer">
+            <div class="duration text">
+              <span class="companyImage material-icons">
+                show_chart
+              </span>
+              {{education.duration}}
+            </div>
           </div>
         </div>
       </ng-container>
@@ -214,32 +162,14 @@
   <div class="sections" id="contact">
     <div class="heading">Contact</div>
     <div class="content">
-      <ng-container *ngFor="let exp of experiences">
         <div class="card">
-          <div class="card__title">
-
-            <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                account_circle
-              </span> HowTechWorx</div>
+          <div class="card__content text">
+            <p>Email: sakshayphanda03@gmail.com</p>
+            <p>Linkenin: https://www.linkedin.com/in/sakshay-phanda-b5a6977a/</p>
+            <p>Github: https://github.com/sakshayphanda</p>
           </div>
-          <div class="card__content">
 
-            <ul class="text">
-              <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-              <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-              <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-                within
-                a single app</li>
-              <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
-                collection
-                of high resolution wallpapers</li>
-              <li>And more..</li>
-              I have a potential to work as a team member, to listen and follow according to the task assigned to me.
-            </ul>
-          </div>
         </div>
-      </ng-container>
     </div>
   </div>
 

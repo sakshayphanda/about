@@ -72,11 +72,16 @@ export class SideNavigationComponent implements OnInit {
 
   actionChanged($event, id) {
     $event.stopPropagation();
+    if (id === 'resume') {
+      window.open('../../../../assets/Resume-sakshay.docx', '_blank');
+      return;
+    }
    // this.selectedAction = id;
-    console.log(document.querySelector('#' + id));
     $('.dynamic').animate({
       scrollTop: document.querySelector('#' + id)[`offsetTop`]
     }, 1000);
-   // document.querySelector('.dynamic').scrollTop = document.querySelector('#' + id)[`offsetTop`];
+
+    this.globalData.toggleSideMenu.emit(true);
+
   }
 }
