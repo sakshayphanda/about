@@ -53,3 +53,13 @@ body
 
 li
   margin-left: 20px
+
+html
+  font-size: 15px
+@media screen and (min-width: 320px)
+  html
+    font-size: calc(10px + 4 * ((100vw - 320px) / 680))
+
+@media screen and (min-width: 1840px)
+  html
+    font-size: 22px

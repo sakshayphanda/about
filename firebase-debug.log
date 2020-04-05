@@ -1,0 +1,30 @@
+[debug] [2020-04-05T08:39:53.476Z] ----------------------------------------------------------------------
+[debug] [2020-04-05T08:39:53.478Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-04-05T08:39:53.478Z] CLI Version:   7.16.1
+[debug] [2020-04-05T08:39:53.478Z] Platform:      darwin
+[debug] [2020-04-05T08:39:53.478Z] Node Version:  v10.16.3
+[debug] [2020-04-05T08:39:53.479Z] Time:          Sun Apr 05 2020 14:09:53 GMT+0530 (India Standard Time)
+[debug] [2020-04-05T08:39:53.479Z] ----------------------------------------------------------------------
+[debug] [2020-04-05T08:39:53.479Z] 
+[debug] [2020-04-05T08:39:53.486Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-05T08:39:53.486Z] > authorizing via signed-in user
+[debug] [2020-04-05T08:39:53.486Z] [iam] checking project sakshay-phanda for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-05T08:39:53.489Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/sakshay-phanda:testIamPermissions  
+
+[debug] [2020-04-05T08:39:56.784Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-05T08:39:56.788Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/sakshay-phanda  
+ 
+[debug] [2020-04-05T08:39:57.390Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'sakshay-phanda'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-04-05T08:39:57.402Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/sakshay-phanda/versions  
+
+[debug] [2020-04-05T08:39:59.871Z] <<< HTTP RESPONSE 200
+[info] i  hosting[sakshay-phanda]: beginning deploy...
+[info] i  hosting[sakshay-phanda]: found 30 files in dist/sakshayphanda
+[debug] [2020-04-05T08:40:00.200Z] [hosting] hash cache [ZGlzdC9zYWtzaGF5cGhhbmRh] stored for 30 files
+[debug] [2020-04-05T08:40:00.200Z] [hosting][hash queue][FINAL]
+[debug] [2020-04-05T08:40:00.200Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/sakshay-phanda/versions/1b74d1bf4ed42a55:populateFiles  
+ <request body omitted>
