@@ -73,12 +73,15 @@
           border-bottom: 1px solid var(--border)
           .companyImage
             margin: 10px
+          .companyName
+            align-items: center
+            display: flex
         &__content
           flex: 8
           padding: 20px
 
     .heading
-      height: 60px
+      height: 55px
       color: white
       padding: 20px
       display: flex
@@ -146,10 +149,13 @@
     img
       height: 6em !important
 
+
 @media screen and ( max-width: 500px)
   .image-container
     img
       height: 5.5em !important
+  .heading
+    top: 55px !important
 
   //   display: flex
   //   flex-direction: column
