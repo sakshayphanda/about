@@ -15,7 +15,7 @@
     align-items: center
     &.selected
       border-left: 6px solid var(--primary)
-      border-bottom: 1px solid #dbdbdb
+      background: #eff7ff
     .material-icons
       margin: 5px
   .image-container
@@ -23,13 +23,19 @@
     justify-content: center
     align-items: center
     flex-direction: column
+    border-bottom: 1px solid var(--border)
+    padding: 20px
     img
       width: 50%
       clip-path: circle()
       margin: 10px 0
     .email
-      font-size: 1.1rem
-      font-weight: 600
-      color: grey
+      font-size: 1.8em
+      color: var(--title)
       margin: 10px 0
+      font-weight: 100
+    .short-desc
+      font-size: 1em
+      font-weight: 100
+      color: var(--title)
 

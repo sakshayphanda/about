@@ -1,21 +1,21 @@
 .side-navigation
   color: white
-  background: #ffffff
+  // background-image: url('src/assets/white-texture.png')
+  background: white
   width: 200px
   z-index: 2
   position: absolute
   display: flex
   justify-content: center
-  -webkit-box-shadow: 0 17px 25px rgba(0,0,0,0.18)
-  -moz-box-shadow: 0 17px 25px rgba(0,0,0,0.18)
-  box-shadow: 0 17px 25px rgba(0,0,0,0.18)
+  -webkit-box-shadow: var(--sideBarBoxShadow)
+  -moz-box-shadow: var(--sideBarBoxShadow)
+  box-shadow: var(--sideBarBoxShadow)
   top: 0
   height: 100vh
 
 .dynamic
   width: calc(100vw - 200px)
   height: 100vh
-  background: var(--dynamicBackground)
   overflow-x: hidden
   z-index: 0
   position: absolute
