@@ -6,14 +6,9 @@
     </div>
     <div class="intro__2">
       <div class="image-container">
-        <img src="../../../../assets/angular-circle.png">
-        <img src="../../../../assets/javascript.svg">
-        <img src="../../../../assets/typescript.png">
-        <img src="../../../../assets/jquery.png">
-        <img src="../../../../assets/html.jpg">
-        <img src="../../../../assets/sass.png">
-        <img src="../../../../assets/css.png">
-
+        <ng-container *ngFor="let image of imagePaths">
+          <img [src]="image">
+        </ng-container>
       </div>
     </div>
   </div>
@@ -85,7 +80,7 @@
           </div>
           <div class="card__content text" [innerHTML]="project.innerHTML"></div>
           <div class="card__footer">
-            <a class="duration text" [href] = "project.link" target="_blank">
+            <a class="duration text" [href]="project.link" target="_blank">
               {{project.link}}
             </a>
           </div>
@@ -117,18 +112,19 @@
   <div class="sections" id="awards">
     <div class="heading">Awards</div>
     <div class="content">
-        <div class="card">
-          <div class="card__title">
+      <div class="card">
+        <div class="card__title">
 
-            <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                star
-              </span> Letter of Appreciation</div>
-          </div>
-          <div class="card__content">
-            Received a letter of Appreciation from the College faculty for developing the official BVICAM app and for being a part of Android core team
-          </div>
+          <div class="companyName text emphasize">
+            <span class="companyImage material-icons">
+              star
+            </span> Letter of Appreciation</div>
         </div>
+        <div class="card__content">
+          Received a letter of Appreciation from the College faculty for developing the official BVICAM app and for
+          being a part of Android core team
+        </div>
+      </div>
     </div>
   </div>
 
@@ -162,14 +158,14 @@
   <div class="sections" id="contact">
     <div class="heading">Contact</div>
     <div class="content">
-        <div class="card">
-          <div class="card__content text">
-            <p>Email: sakshayphanda03@gmail.com</p><br>
-            <p>Linkedin: https://www.linkedin.com/in/sakshay-phanda-b5a6977a/</p><br>
-            <p>Github: https://github.com/sakshayphanda</p>
-          </div>
-
+      <div class="card">
+        <div class="card__content text">
+          <p>Email: sakshayphanda03@gmail.com</p><br>
+          <p>Linkedin: <a href="https://www.linkedin.com/in/sakshay-phanda-b5a6977a">https://www.linkedin.com/in/sakshay-phanda-b5a6977a/</a></p><br>
+          <p>Github: <a href="https://github.com/sakshayphanda">https://github.com/sakshayphanda </a></p>
         </div>
+
+      </div>
     </div>
   </div>
 

@@ -1,4 +1,4 @@
-export interface IExperience {
+export interface IEducation {
   companyName;
   companyLogo?;
   innerHTML;

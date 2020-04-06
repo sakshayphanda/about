@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from 'src/app/services/global-data.service';
 import { experiences } from 'src/app/data/experiences';
-import { IExperience } from 'src/app/interfaces/Iexperience';
 import { skills } from 'src/app/data/skills';
 import { projects } from 'src/app/data/projects';
 import { education } from 'src/app/data/education';
+import { ISkill } from 'src/app/interfaces/ISkill';
+import { IProject } from 'src/app/interfaces/IProject';
+import { IExperience } from 'src/app/interfaces/IExperience';
+import { IEducation } from 'src/app/interfaces/IEducation';
 
 @Component({
   selector: 'app-dynamic-content',
@@ -13,10 +16,19 @@ import { education } from 'src/app/data/education';
 })
 export class DynamicContentComponent implements OnInit {
 
+  imagePaths = [
+    '../../../../assets/angular-circle.png',
+    '../../../../assets/javascript.svg',
+    '../../../../assets/typescript.png',
+    '../../../../assets/jquery.png',
+    '../../../../assets/html.jpg',
+    '../../../../assets/sass.png',
+    '../../../../assets/css.png'
+  ];
   experiences: IExperience[] = experiences;
-  skills = [] = skills;
-  projects = [] = projects;
-  education = [] = education;
+  skills: ISkill[] = skills;
+  projects: IProject [] = projects;
+  education: IEducation[] = education;
 
   constructor(
     private globalData: GlobalDataService
