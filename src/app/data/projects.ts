@@ -6,7 +6,7 @@ export const projects = [
       It's a TodoList application developed using Angular Framework. I have used NgRx for State Management accross the Application.
       </p>
     `,
-    link: 'https://www.npmjs.com/package/sp-notifications',
+    link: '',
   },
   {
     projectName: 'Notification Library angular',

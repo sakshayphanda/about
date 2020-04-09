@@ -79,7 +79,7 @@
             </div>
           </div>
           <div class="card__content text" [innerHTML]="project.innerHTML"></div>
-          <div class="card__footer">
+          <div class="card__footer" *ngIf="project.link">
             <a class="duration text" [href]="project.link" target="_blank">
               {{project.link}}
             </a>
