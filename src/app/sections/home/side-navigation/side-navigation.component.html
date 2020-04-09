@@ -1,19 +1,15 @@
 <div class="container">
 
   <div class="image-container">
-    <!-- <img src="https://cdn1.iconfinder.com/data/icons/big-rocket/80/BigRocket-1-01-512.png"> -->
     <p class="email">Sakshay<br>Phanda</p>
     <div class="short-desc">Frontend Developer</div>
   </div>
 
   <ng-container *ngFor="let action of actions">
-    <div (click)="actionChanged($event, action.id)" class="action" [class.selected] = "action.id === selectedAction">
-      <span class="material-icons">
+    <div (click)="actionChanged($event, action.id)"  class="action {{action.id === selectedAction ? action.id + 'Selected selected' : false}}">
+      <span class="material-icons {{action.id}}">
         {{action.icon}}
         </span>{{ action.name}}
       </div>
-      <!-- <a href='../../../../assets/Resume-sakshay.docx' download>
-        resume
-      </a> -->
   </ng-container>
 </div>
