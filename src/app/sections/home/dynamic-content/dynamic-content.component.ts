@@ -57,8 +57,8 @@ export class DynamicContentComponent implements OnInit {
 
   darkMode() {
     this.setProperty('--cardBackground', '#2f2f2f');
-    this.setProperty('--mainBackground', "url('../../../../assets/bg-1.jpg')");
     this.setProperty('--texturedBackground', "url('../../../../assets/bg-2.jpg')");
+    this.setProperty('--mainBackground', "url('../../../../assets/bg-2.jpg')");
     this.setProperty('--sideBarTextColor', '#08fdd8');
     this.setProperty('--cardTextColor', '#cfcece');
     this.setProperty('--cardBoxShadow' , 'unset');
