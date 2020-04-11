@@ -29,12 +29,18 @@ export class DynamicContentComponent implements OnInit {
   skills: ISkill[] = skills;
   projects: IProject [] = projects;
   education: IEducation[] = education;
+  darkModeEnabled = false;
+  mode = 'Dark';
 
   constructor(
     private globalData: GlobalDataService
   ) {}
 
-  ngOnInit(): void {
+    ngOnInit() {
+    this.darkModeEnabled = JSON.parse(localStorage.getItem('darkMode'));
+    if(this.darkModeEnabled) {
+      this.darkMode();
+    }
     document.querySelector('.dynamic').addEventListener('scroll', (ev) => {
       const sections = document.getElementsByClassName('sections');
       if(ev[`target`][`scrollTop`] < document.querySelectorAll('.sections')[0][`offsetTop`]) {
@@ -47,5 +53,41 @@ export class DynamicContentComponent implements OnInit {
         }
       }
     });
+  }
+
+  darkMode() {
+    this.setProperty('--cardBackground', '#2f2f2f');
+    this.setProperty('--mainBackground', "url('../../../../assets/bg-1.jpg')");
+    this.setProperty('--texturedBackground', "url('../../../../assets/bg-2.jpg')");
+    this.setProperty('--sideBarTextColor', '#08fdd8');
+    this.setProperty('--cardTextColor', '#cfcece');
+    this.setProperty('--cardBoxShadow' , 'unset');
+    this.mode = 'Light';
+  }
+
+  lightMode() {
+    this.setProperty('--cardBackground', 'white');
+    this.setProperty('--mainBackground', "url('../../../../assets/sky.jpg')");
+    this.setProperty('--texturedBackground', "url('../../../../assets/white-texture.png')");
+    this.setProperty('--sideBarTextColor', '#476282');
+    this.setProperty('--cardTextColor', '#476282');
+    this.setProperty('--cardBoxShadow' , '0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)');
+    this.mode = 'Dark';
+  }
+
+  toggleDarkMode() {
+    if(!this.darkModeEnabled) {
+    this.darkMode();
+    this.darkModeEnabled = true;
+    localStorage.setItem('darkMode', 'true');
+    } else {
+      this.lightMode();
+      this.darkModeEnabled = false;
+      localStorage.setItem('darkMode', 'false');
+    }
+  }
+
+  setProperty(variable, value) {
+    document.documentElement.style.setProperty(variable, value);
   }
 }

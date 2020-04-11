@@ -1,8 +1,11 @@
+$width: 60px
+$padding: 7px
+$height: $width / 2 + $padding
 
 .portfolio
   height: 100%
   width: 100%
-  background-image: url('../../../../assets/sky.jpg')
+  background-image: var(--mainBackground)
   background-size: cover
   .intro
     height: 100%
@@ -45,7 +48,7 @@
 
   .sections
     width: 100%
-    background-image: url('src/assets/white-texture.png')
+    background-image: var(--texturedBackground)
     .content
       padding: 10px
       display: flex
@@ -100,12 +103,12 @@
 .text
   padding: 10px
   font-size: 1.4rem
-  color: var(--title)
+  color: var(--cardTextColor)
 
 .emphasize
   font-style: italic
   font-size: 1.6rem
-  border-left: 3px solid var(--title)
+  border-left: 3px solid var(--cardTextColor)
 
 
 #about
@@ -139,6 +142,37 @@
   .heading
     background: var(--color-contact)
 
+.switch-wrap
+  cursor: pointer
+  background: #15273b
+  padding: $padding
+  width: $width
+  height: $height
+  border-radius: $height / 2
+  input
+    position: absolute
+    opacity: 0
+    width: 0
+    height: 0
+.switch
+  height: 100%
+  display: grid
+  grid-template-columns: 0fr 1fr 1fr
+  transition: .2s
+  //ICYMI, pseudo elements are treated as grid items
+  &::after
+    content: ''
+    border-radius: 50%
+    background: #ccc
+    grid-column: 2
+    transition: background .2s
+
+input:checked
+  + .switch
+    grid-template-columns: 1fr 1fr 0fr
+    &::after
+      background-color: #52cf71
+
 @keyframes rotate
   0%
     transform: rotate(0deg)
@@ -161,13 +195,3 @@
   .image-container
     img
       height: 5.5em !important
-  .heading
-   // top: 55px !important
-
-  //   display: flex
-  //   flex-direction: column
-  //   &__1
-  //     flex: 1
-  //     justify-content: center
-  //   &__2
-  //     flex: 1
