@@ -62,6 +62,8 @@ export class DynamicContentComponent implements OnInit {
     this.setProperty('--sideBarTextColor', '#08fdd8');
     this.setProperty('--cardTextColor', '#cfcece');
     this.setProperty('--cardBoxShadow' , 'unset');
+    this.setProperty('--menuBoxShadow' , 'unset');
+
     this.mode = 'Light';
   }
 
@@ -71,6 +73,7 @@ export class DynamicContentComponent implements OnInit {
     this.setProperty('--texturedBackground', "url('../../../../assets/white-texture.png')");
     this.setProperty('--sideBarTextColor', '#476282');
     this.setProperty('--cardTextColor', '#476282');
+    this.setProperty('--menuBoxShadow' , '1px 1px 2px 2px #dbdbdb');
     this.setProperty('--cardBoxShadow' , '0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)');
     this.mode = 'Dark';
   }
