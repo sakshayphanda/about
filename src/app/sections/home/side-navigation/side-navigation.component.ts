@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { GlobalDataService } from 'src/app/services/global-data.service';
+import { IActions } from '../../../interfaces/IActions';
 
 @Component({
   selector: 'app-side-navigation',
@@ -9,10 +9,8 @@ import { GlobalDataService } from 'src/app/services/global-data.service';
 })
 export class SideNavigationComponent implements OnInit {
 
-  productsInCart = {};
-  userData = {};
   selectedAction = '';
-  actions = [];
+  actions: IActions[];
 
   constructor(
     private globalData: GlobalDataService
