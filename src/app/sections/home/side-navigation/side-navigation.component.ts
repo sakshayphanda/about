@@ -73,7 +73,7 @@ export class SideNavigationComponent implements OnInit {
   actionChanged($event, id) {
     $event.stopPropagation();
     if (id === 'resume') {
-      window.open('../../../../assets/Resume-sakshay.docx', '_blank');
+      window.open('../../../../assets/Resume-sakshayphanda.docx', '_blank');
       return;
     }
    // this.selectedAction = id;
