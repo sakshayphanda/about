@@ -1,5 +1,14 @@
 export const projects = [
   {
+    projectName: 'TodoList MEAN Stack',
+    innerHTML: `
+      <p>
+      It's a TodoList application developed using MEAN.
+      </p>
+    `,
+    link: 'http://mean-todo.s3-website.ap-south-1.amazonaws.com/',
+  },
+  {
     projectName: 'TodoList with NgRx',
     innerHTML: `
       <p>
