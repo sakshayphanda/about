@@ -23,15 +23,11 @@ export const experiences = [
     companyName: 'HowTechWorx',
     innerHTML: `
     <ul>
-      <p>I've worked on various Angular and Android projects(Self and Team) such as:</p>
-      <li>SuperMart: An E-commerce website developed using Angular framework and Firebase.</li>
-      <li>BVICAM Android app: Students can access the notes, syllabus, Add friends, timeline etc
-        within
-        a single app</li>
+      <p>I have two live apps on play store under the howtechworx (Google Play console account)</p>
       <li>Materialistic wallpapers: Personalises the look and feel of the Android device with the amazing
         collection
         of high resolution wallpapers</li>
-      <li>And more..</li>
+      <li>Handy notepad: Its a basic notes app for saving the information you tend to forget</li>
     </ul>
     `,
     duration: 'July 2017 - May 2018'

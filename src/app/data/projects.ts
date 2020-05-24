@@ -1,12 +1,15 @@
 export const projects = [
   {
-    projectName: 'TodoList MEAN Stack',
+    projectName: 'BeMEAN',
     innerHTML: `
       <p>
-      It's a TodoList application developed using MEAN.
+      A community based application in which users can share there code.<br>
+      Technologies used - MEAN(i.e MongoDB ,Express.js ,Angular and Node.js)<br>
+      Also used NgRx for efficent State Management. <br>
+      (In a development phase currently)
       </p>
     `,
-    link: 'http://mean-todo.s3-website.ap-south-1.amazonaws.com/',
+    link: 'https://bemeanstack.web.app/',
   },
   {
     projectName: 'TodoList with NgRx',
@@ -35,6 +38,15 @@ export const projects = [
       </p>
     `,
     link: 'https://e-shop-21e79.firebaseapp.com',
+  },
+  {
+    projectName: 'TodoList MEAN Stack',
+    innerHTML: `
+      <p>
+      It's a TodoList application developed using MEAN.
+      </p>
+    `,
+    link: '',
   }, {
     projectName: 'Materialistic Wallpapers',
     innerHTML: `

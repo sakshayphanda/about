@@ -9,7 +9,7 @@ export const skills = [
       <li>NodeJS</li>
     </ul>
     `,
-    duration: 'August 2018 - Present'
+    duration: ''
   },
   {
     name: 'HTMl',
@@ -19,7 +19,7 @@ export const skills = [
     <li>Emmet</li>
   </ul>
     `,
-    duration: 'May 2018 - July 2018'
+    duration: ''
   },
   {
     name: 'CSS',
@@ -28,20 +28,27 @@ export const skills = [
     <li>SASS</li>
     <li>SCSS</li>
   </ul>`,
-    duration: 'July 2017 - May 2018'
+  duration: ''
+  },
+  {
+    name: 'Database (NoSQL)',
+    innerHTML: `
+    <ul>
+    <li>Firebase Database</li>
+    <li>MongoDB</li>
+  </ul>`,
+  duration: ''
   },
   {
     name: 'Other',
     innerHTML: `
     <ul>
+    <li>Core Java</li>
+    <li>Android</li>
     <li>Git</li>
     <li>Bitbucket</li>
     <li>Github</li>
-    <li>Firebase</li>
-    <li>Android</li>
-    <li>Core Java</li>
-    <li>Microsoft Visual Studio Code</li>
   </ul>`,
-    duration: 'July 2017 - May 2018'
+  duration: ''
   }
 ];
