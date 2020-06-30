@@ -84,7 +84,7 @@ export class DynamicContentComponent implements OnInit {
       'url("../../../../assets/white-texture.png")'
     );
     this.setProperty('--sectionBackground', '#f8f8f8');
-    this.setProperty('--titleColor', '#58180e');
+    this.setProperty('--titleColor', '#424242');
 
     this.setProperty('--sideBarTextColor', '#476282');
     this.setProperty('--cardTextColor', '#476282');
