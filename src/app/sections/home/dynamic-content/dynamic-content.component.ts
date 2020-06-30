@@ -77,7 +77,7 @@ export class DynamicContentComponent implements OnInit {
 
   lightMode() {
     this.setProperty('--cardBackground', 'white');
-    this.setProperty('--mainBackground', 'url("../../../../assets/sky.jpg")');
+    // this.setProperty('--mainBackground', 'url("../../../../assets/sky.jpg")');
     this.setProperty(
       '--texturedBackground',
       'url("../../../../assets/white-texture.png")'
