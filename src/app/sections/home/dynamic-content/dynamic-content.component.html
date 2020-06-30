@@ -9,13 +9,13 @@
         <div class="switch"></div>
       </label>
     </div>
-    <div class="intro__2">
+    <!-- <div class="intro__2">
       <div class="image-container">
         <ng-container *ngFor="let image of imagePaths">
           <img [src]="image">
         </ng-container>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <div class="sections" id="about">
@@ -23,7 +23,7 @@
     <div class="content">
       <div class="card">
         <p class="text emphasize">
-          I'm a passionate Frontend developer with an Industry experience of building web applications.<br><br> I
+          I'm a passionate Software Developer with an Industry experience of building web applications.<br><br> I
           specialise
           in Javascript
           and have experience working with Angular.
@@ -49,6 +49,30 @@
     </div>
   </div>
 
+  <div class="sections" id="skills">
+    <div class="heading">Skills</div>
+    <div class="content">
+      <div class="image-container">
+        <ng-container *ngFor="let image of imagePaths">
+          <img [src]="image">
+        </ng-container>
+      </div>
+      <ng-container *ngFor="let skill of skills">
+        <div class="card">
+          <div class="card__title">
+            <div class="companyName text emphasize">
+              <span class="companyImage material-icons">
+                bar_chart
+              </span>
+              {{skill.name}}
+            </div>
+          </div>
+          <div class="card__content text" [innerHTML]="skill.innerHTML"></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
 
   <div class="sections" id="experience">
     <div class="heading">Experience</div>
@@ -58,7 +82,7 @@
           <div class="card__title">
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
-                account_circle
+                work
               </span>
               {{experience.companyName}}
             </div>
@@ -75,6 +99,7 @@
         </div>
       </ng-container>
     </div>
+
   </div>
 
 
@@ -103,24 +128,6 @@
   </div>
 
 
-  <div class="sections" id="skills">
-    <div class="heading">Skills</div>
-    <div class="content">
-      <ng-container *ngFor="let skill of skills">
-        <div class="card">
-          <div class="card__title">
-            <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                bar_chart
-              </span>
-              {{skill.name}}
-            </div>
-          </div>
-          <div class="card__content text" [innerHTML]="skill.innerHTML"></div>
-        </div>
-      </ng-container>
-    </div>
-  </div>
 
   <div class="sections" id="awards">
     <div class="heading">Awards</div>

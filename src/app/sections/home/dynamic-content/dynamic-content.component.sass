@@ -16,7 +16,7 @@ $height: $width / 2 + $padding
       flex: 1
       display: flex
       align-items: center
-      justify-content: flex-end
+      justify-content: center
       flex-direction: column
       .title
         color: white
@@ -48,8 +48,10 @@ $height: $width / 2 + $padding
 
   .sections
     width: 100%
-    background-image: var(--texturedBackground)
+    // background-image: var(--texturedBackground)
+    background: var(--sectionBackground)
     background-repeat: round
+    transition: all .5s ease-in-out
     .content
       padding: 10px
       display: flex
@@ -57,7 +59,6 @@ $height: $width / 2 + $padding
       align-items: center
       flex-direction: column
       width: 100%
-      word-spacing: 4px
       .card
         width: 90%
         box-shadow: var(--cardBoxShadow)
@@ -97,20 +98,32 @@ $height: $width / 2 + $padding
       align-items: center
       font-size: 2rem
       position: sticky
+      z-index: 1
       top: 0
-      box-shadow: var(--sideBarBoxShadow)
-
+      // box-shadow: var(--sideBarBoxShadow)
+.image-container
+  width: 100%
+  height: 90%
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  flex-wrap: wrap
+  img
+    clip-path: circle()
+    height: 5em
+    margin: 10px
+    &:hover
+      animation: 5s linear rotate infinite
 
 .text
   padding: 10px
-  font-size: 1.4rem
+  font-size: 1.2rem
+  line-height: 1.6em
   color: var(--cardTextColor)
 
 .emphasize
-  font-style: italic
-  font-size: 1.6rem
-  border-left: 3px solid var(--cardTextColor)
-
+  font-size: 1.4rem
+  font-weight: 400
 
 #about
   .heading

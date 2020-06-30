@@ -33,6 +33,10 @@ export class SideNavigationComponent implements OnInit {
         name: 'About',
         icon: 'account_circle'
       }, {
+        id: 'skills',
+        name: 'Skills',
+        icon: 'bar_chart'
+      }, {
         id: 'experience',
         name: 'Experience',
         icon: 'show_chart'
@@ -42,10 +46,6 @@ export class SideNavigationComponent implements OnInit {
         name: 'Projects',
         icon: 'developer_board'
 
-      }, {
-        id: 'skills',
-        name: 'Skills',
-        icon: 'bar_chart'
       }, {
         id: 'awards',
         name: 'Awards',

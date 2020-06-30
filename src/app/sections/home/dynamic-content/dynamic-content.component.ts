@@ -66,8 +66,9 @@ export class DynamicContentComponent implements OnInit {
       '--texturedBackground',
       'url("../../../../assets/bg-2.jpg")'
     );
-    this.setProperty('--mainBackground', 'url("../../../../assets/bg-2.jpg")');
-    this.setProperty('--sideBarTextColor', '#08fdd8');
+    this.setProperty('--sectionBackground', '#252525');
+    // this.setProperty('--mainBackground', 'url("../../../../assets/bg-2.jpg")');
+    this.setProperty('--sideBarTextColor', '#fff');
     this.setProperty('--cardTextColor', '#cfcece');
     this.setProperty('--cardBoxShadow', 'unset');
 
@@ -81,12 +82,14 @@ export class DynamicContentComponent implements OnInit {
       '--texturedBackground',
       'url("../../../../assets/white-texture.png")'
     );
+    this.setProperty('--sectionBackground', '#f8f8f8');
+
     this.setProperty('--sideBarTextColor', '#476282');
     this.setProperty('--cardTextColor', '#476282');
-    this.setProperty(
-      '--cardBoxShadow',
-      '0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)'
-    );
+    // this.setProperty(
+    //   '--cardBoxShadow',
+    //   '0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)'
+    // );
     this.mode = 'Dark';
   }
 
