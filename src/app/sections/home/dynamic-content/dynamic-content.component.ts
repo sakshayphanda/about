@@ -67,22 +67,24 @@ export class DynamicContentComponent implements OnInit {
       'url("../../../../assets/bg-2.jpg")'
     );
     this.setProperty('--sectionBackground', '#252525');
-    // this.setProperty('--mainBackground', 'url("../../../../assets/bg-2.jpg")');
+    this.setProperty('--mainBackground', 'url("../../../../assets/dark.jpg")');
     this.setProperty('--sideBarTextColor', '#fff');
     this.setProperty('--cardTextColor', '#cfcece');
     this.setProperty('--cardBoxShadow', 'unset');
+    this.setProperty('--titleColor', '#f8f8f8');
 
     this.mode = 'Light';
   }
 
   lightMode() {
     this.setProperty('--cardBackground', 'white');
-    // this.setProperty('--mainBackground', 'url("../../../../assets/sky.jpg")');
+    this.setProperty('--mainBackground', 'url("../../../../assets/light.jpg")');
     this.setProperty(
       '--texturedBackground',
       'url("../../../../assets/white-texture.png")'
     );
     this.setProperty('--sectionBackground', '#f8f8f8');
+    this.setProperty('--titleColor', '#58180e');
 
     this.setProperty('--sideBarTextColor', '#476282');
     this.setProperty('--cardTextColor', '#476282');
