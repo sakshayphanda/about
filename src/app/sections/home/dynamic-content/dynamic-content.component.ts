@@ -35,10 +35,19 @@ export class DynamicContentComponent implements OnInit {
   darkModeEnabled = false;
   mode = 'Dark';
   items = [1,2,3,4,5];
+  isChrome;
 
   constructor(private globalData: GlobalDataService) {}
 
   ngOnInit() {
+    this.isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (this.isChrome) {
+    const sections = document.getElementsByClassName('sections');
+    for (let i = 0; i < sections.length; i++) {
+      document.querySelectorAll('.sections .heading')[i].classList.add('chrome');
+    }
+  }
+
     this.darkModeEnabled = JSON.parse(localStorage.getItem('darkMode'));
     if (this.darkModeEnabled) {
       this.darkMode();
