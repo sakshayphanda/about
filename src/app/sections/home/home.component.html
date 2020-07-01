@@ -7,6 +7,6 @@
 
 <div class="menu-button" *ngIf="showMenuButton" (click)="showSideMenu = !showSideMenu">
   <span class="material-icons">
-    menu
+    {{!showSideMenu ? 'menu' : 'arrow_back_ios' }}
   </span>
 </div>
