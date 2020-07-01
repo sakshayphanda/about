@@ -9,7 +9,7 @@ export const stagger2 = trigger('stagger2', [
         opacity: 0
       }),
     ]),
-    query(':enter', [
+    query('img', [
       stagger('200ms', [
         animate('300ms', style({
           transform: 'unset',

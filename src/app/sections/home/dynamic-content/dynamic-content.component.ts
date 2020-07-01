@@ -60,6 +60,17 @@ export class DynamicContentComponent implements OnInit {
           this.globalData.selectedAction.emit(
             document.querySelectorAll('.sections')[i][`id`]
           );
+          document.querySelector('.content .image-container img').classList.add('animate');
+          this.imagePaths = [];
+          this.imagePaths = [
+            '../../../../assets/angular-circle.png',
+            '../../../../assets/javascript.svg',
+            '../../../../assets/typescript.png',
+            '../../../../assets/jquery.png',
+            '../../../../assets/html.jpg',
+            '../../../../assets/sass.png',
+            '../../../../assets/css.png',
+          ];
         }
       }
     });
