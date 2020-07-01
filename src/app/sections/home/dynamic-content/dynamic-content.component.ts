@@ -8,11 +8,15 @@ import { ISkill } from 'src/app/interfaces/ISkill';
 import { IProject } from 'src/app/interfaces/IProject';
 import { IExperience } from 'src/app/interfaces/IExperience';
 import { IEducation } from 'src/app/interfaces/IEducation';
+import { fade } from 'src/app/animations/fade';
+import { stagger1 } from 'src/app/animations/stagger';
+import { stagger2 } from 'src/app/animations/stagger2';
 
 @Component({
   selector: 'app-dynamic-content',
   templateUrl: './dynamic-content.component.html',
   styleUrls: ['./dynamic-content.component.sass'],
+  animations: [ fade , stagger1, stagger2]
 })
 export class DynamicContentComponent implements OnInit {
   imagePaths = [
@@ -30,6 +34,7 @@ export class DynamicContentComponent implements OnInit {
   education: IEducation[] = education;
   darkModeEnabled = false;
   mode = 'Dark';
+  items = [1,2,3,4,5];
 
   constructor(private globalData: GlobalDataService) {}
 

@@ -8,6 +8,7 @@ import { SideNavigationComponent } from './sections/home/side-navigation/side-na
 import { DynamicContentComponent } from './sections/home/dynamic-content/dynamic-content.component';
 import { LoginComponent } from './sections/login/login.component';
 import { HomeComponent } from './sections/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as $ from 'jquery';
 
 
@@ -22,6 +23,7 @@ import * as $ from 'jquery';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule
   ],
   providers: [],
