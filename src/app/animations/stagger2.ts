@@ -11,7 +11,7 @@ export const stagger2 = trigger('stagger2', [
     ]),
     query('img', [
       stagger('200ms', [
-        animate('300ms', style({
+        animate('300ms ease-in-out', style({
           transform: 'unset',
           opacity: 1 }))
       ])

@@ -1,4 +1,4 @@
-<div class="portfolio">
+<div [@slide]="state ? 'true' : 'false'" class="portfolio">
 
   <div class="intro">
     <div class="intro__1">
@@ -59,7 +59,7 @@
         </ng-container>
       </div>
       <ng-container *ngFor="let skill of skills">
-        <div class="card">
+        <div   class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">

@@ -11,12 +11,13 @@ import { IEducation } from 'src/app/interfaces/IEducation';
 import { fade } from 'src/app/animations/fade';
 import { stagger1 } from 'src/app/animations/stagger';
 import { stagger2 } from 'src/app/animations/stagger2';
+import { slide } from 'src/app/animations/slide';
 
 @Component({
   selector: 'app-dynamic-content',
   templateUrl: './dynamic-content.component.html',
   styleUrls: ['./dynamic-content.component.sass'],
-  animations: [ fade , stagger1, stagger2]
+  animations: [ fade , stagger1, stagger2, slide]
 })
 export class DynamicContentComponent implements OnInit {
   imagePaths = [
@@ -36,6 +37,7 @@ export class DynamicContentComponent implements OnInit {
   mode = 'Dark';
   items = [1,2,3,4,5];
   isChrome;
+  state = false;
 
   constructor(private globalData: GlobalDataService) {}
 
@@ -53,6 +55,7 @@ export class DynamicContentComponent implements OnInit {
       this.darkMode();
     }
     document.querySelector('.dynamic').addEventListener('scroll', (ev) => {
+      this.state = false;
       const sections = document.getElementsByClassName('sections');
       if (
         ev[`target`][`scrollTop`] <
@@ -69,19 +72,25 @@ export class DynamicContentComponent implements OnInit {
           this.globalData.selectedAction.emit(
             document.querySelectorAll('.sections')[i][`id`]
           );
-          document.querySelector('.content .image-container img').classList.add('animate');
-          this.imagePaths = [];
-          this.imagePaths = [
-            '../../../../assets/angular-circle.png',
-            '../../../../assets/javascript.svg',
-            '../../../../assets/typescript.png',
-            '../../../../assets/jquery.png',
-            '../../../../assets/html.jpg',
-            '../../../../assets/sass.png',
-            '../../../../assets/css.png',
-          ];
         }
       }
+
+      const cards = document.querySelectorAll('.sections .card');
+      for (let i = 0; i < cards.length; i++) {
+        if (
+          ev[`target`][`scrollTop`] >
+          document.querySelectorAll('.sections .card')[i][`offsetTop`] &&
+          ev[`target`][`scrollTop`] <= (
+            document.querySelectorAll('.sections .card')[i][`offsetTop`] + document.querySelectorAll('.sections .card')[i][`offsetHeight`])
+        ) {
+          this.state = true;
+          document.querySelectorAll('.sections .card')[i].classList.add('animate');
+        } else {
+          document.querySelectorAll('.sections .card')[i].classList.remove('animate');
+        }
+      }
+      console.log(this.state);
+
     });
   }
 
