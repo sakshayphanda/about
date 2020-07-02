@@ -2,19 +2,16 @@ import { trigger, state, transition, animate, style, query, stagger, keyframes }
 
 
 export const stagger3 = trigger('staggerRotate', [
-  transition('* => *', [ // each time the binding value changes
-    query('img', [
-      style({
-        transform: 'translate(-50%)',
-        opacity: 0
-      }),
-    ]),
-    query(':enter', [
-      stagger('500ms', [
+  state('false', style({
+    transform: 'translate(-50%)',
+    opacity: 0
+  })),
+  transition('* => true', [ // each time the binding value changes
+
         animate('500ms', keyframes([
           style({
             transform: 'rotateX(180deg) rotateZ(90deg)',
-            opacity: 1,
+            opacity: 0,
             offset: 0.33
           }),
           style({
@@ -29,6 +26,4 @@ export const stagger3 = trigger('staggerRotate', [
           })
         ]))
       ])
-    ])
-  ])
 ]);

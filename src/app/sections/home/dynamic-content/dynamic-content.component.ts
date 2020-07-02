@@ -12,12 +12,13 @@ import { fade } from 'src/app/animations/fade';
 import { stagger1 } from 'src/app/animations/stagger';
 import { stagger2 } from 'src/app/animations/stagger2';
 import { slide } from 'src/app/animations/slide';
+import { stagger3 } from 'src/app/animations/staggerRotate';
 
 @Component({
   selector: 'app-dynamic-content',
   templateUrl: './dynamic-content.component.html',
   styleUrls: ['./dynamic-content.component.sass'],
-  animations: [ fade , stagger1, stagger2, slide]
+  animations: [ fade , stagger1, stagger2, slide, stagger3]
 })
 export class DynamicContentComponent implements OnInit {
   imagePaths = [
@@ -38,6 +39,7 @@ export class DynamicContentComponent implements OnInit {
   items = [1,2,3,4,5];
   isChrome;
   state = false;
+  shortDesc= false;
 
   constructor(private globalData: GlobalDataService) {}
 
@@ -143,5 +145,15 @@ export class DynamicContentComponent implements OnInit {
 
   setProperty(variable, value) {
     document.documentElement.style.setProperty(variable, value);
+  }
+
+  imageStaggerStart(event) {
+    console.log(event);
+
+  }
+  imageStaggerDone(event) {
+    this.shortDesc = true;
+    console.log(event);
+
   }
 }

@@ -8,8 +8,6 @@ export const stagger2 = trigger('stagger2', [
         transform: 'translate(-50%)',
         opacity: 0
       }),
-    ]),
-    query('img', [
       stagger('200ms', [
         animate('300ms ease-in-out', style({
           transform: 'unset',

@@ -7,13 +7,13 @@ export const slide = trigger('slide', [
       stagger('500ms', [
       animate('2s', keyframes([
         style({
-        transform: 'translate(5%)',
+        transform: 'translate(2%)',
         opacity: 1,
         offset: 0.33
         }),
         style({
-          transform: 'translate(10%)',
-          opacity: 0,
+          transform: 'translate(3%)',
+          opacity: 0.5,
           offset: 1
           })
       ]))])

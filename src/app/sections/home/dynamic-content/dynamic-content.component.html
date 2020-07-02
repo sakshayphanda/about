@@ -1,9 +1,9 @@
 <div [@slide]="state ? 'true' : 'false'" class="portfolio">
 
   <div class="intro">
-    <div class="intro__1">
-      <div @fade class="title">Hi! I'm Sakshay Phanda.</div>
-      <div class="short-desc">MEAN Stack Developer</div>
+    <div  class="intro__1">
+      <div @fade (@fade.start) ="imageStaggerStart($event)" (@fade.done) ="imageStaggerDone($event)" class="title">Hi! I'm Sakshay</div>
+      <div [@staggerRotate]="shortDesc" class="short-desc">MEAN Stack Developer</div>
 
       <label title="Enable {{mode}} mode" class="switch-wrap">
         <input type="checkbox" [checked]="darkModeEnabled" (change)="toggleDarkMode()" />
@@ -11,7 +11,7 @@
       </label>
     </div>
     <div class="intro__2">
-      <div [@stagger2]="imagePaths.length" class="image-container">
+      <div [@stagger2] class="image-container">
         <ng-container *ngFor="let image of imagePaths">
           <img [src]="image">
         </ng-container>
@@ -55,11 +55,11 @@
     <div class="content">
       <div [@stagger2]="imagePaths.length" class="image-container">
         <ng-container *ngFor="let image of imagePaths">
-          <img   [src]="image">
+          <img [src]="image">
         </ng-container>
       </div>
       <ng-container *ngFor="let skill of skills">
-        <div   class="card">
+        <div class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
               <span class="companyImage material-icons">
