@@ -7,11 +7,16 @@ export const stagger3 = trigger('staggerRotate', [
     opacity: 0
   })),
   transition('* => true', [ // each time the binding value changes
-
+    query(':self', [
+      style({
+        transform: 'translate(-50%)',
+        opacity: 0
+      }),
+      stagger('500ms', [
         animate('500ms', keyframes([
           style({
             transform: 'rotateX(180deg) rotateZ(90deg)',
-            opacity: 0,
+            opacity: 1,
             offset: 0.33
           }),
           style({
@@ -26,4 +31,6 @@ export const stagger3 = trigger('staggerRotate', [
           })
         ]))
       ])
+    ], {optional: true})
+  ])
 ]);
