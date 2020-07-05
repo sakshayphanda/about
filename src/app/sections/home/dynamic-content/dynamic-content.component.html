@@ -2,8 +2,9 @@
 
   <div class="intro">
     <div  class="intro__1">
-      <div @fade (@fade.start) ="imageStaggerStart($event)" (@fade.done) ="imageStaggerDone($event)" class="title">Hi! I'm Sakshay Phanda</div>
-      <div [@staggerRotate]="shortDesc" class="short-desc">MEAN Stack Developer</div>
+      <div [@fade] = "'first'" (@fade.start) ="imageStaggerStart($event)" (@fade.done) ="imageStaggerDone($event)" class="title">Hey there.
+        I'm Sakshay</div>
+      <div [@fade]="shortDesc" class="short-desc">MEAN Stack Developer</div>
 
       <label title="Enable {{mode}} mode" class="switch-wrap">
         <input type="checkbox" [checked]="darkModeEnabled" (change)="toggleDarkMode()" />

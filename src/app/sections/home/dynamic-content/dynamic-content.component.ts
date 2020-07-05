@@ -39,7 +39,7 @@ export class DynamicContentComponent implements OnInit {
   items = [1,2,3,4,5];
   isChrome;
   state = false;
-  shortDesc= false;
+  shortDesc = 'hide';
 
   constructor(private globalData: GlobalDataService) {}
 
@@ -152,7 +152,7 @@ export class DynamicContentComponent implements OnInit {
 
   }
   imageStaggerDone(event) {
-    this.shortDesc = true;
+    this.shortDesc = 'next';
     console.log(event);
 
   }
