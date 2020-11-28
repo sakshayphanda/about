@@ -36,7 +36,7 @@ export class DynamicContentComponent implements OnInit {
   education: IEducation[] = education;
   darkModeEnabled = false;
   mode = 'Dark';
-  items = [1,2,3,4,5];
+  items = [1, 2, 3, 4, 5];
   isChrome;
   state = false;
   shortDesc = 'hide';
