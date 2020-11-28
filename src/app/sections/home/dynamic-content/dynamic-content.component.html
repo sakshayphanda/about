@@ -1,20 +1,30 @@
 <div [@slide]="state ? 'true' : 'false'" class="portfolio">
-
   <div class="intro">
-    <div  class="intro__1">
-      <div [@fade] = "'first'" (@fade.start) ="imageStaggerStart($event)" (@fade.done) ="imageStaggerDone($event)" class="title">Hey there.
-        I'm Sakshay</div>
+    <div class="intro__1">
+      <div
+        [@fade]="'first'"
+        (@fade.start)="imageStaggerStart($event)"
+        (@fade.done)="imageStaggerDone($event)"
+        class="title"
+      >
+        Hey there. I'm Sakshay
+      </div>
       <div [@fade]="shortDesc" class="short-desc">MEAN Stack Developer</div>
 
-      <label title="Enable {{mode}} mode" class="switch-wrap">
-        <input type="checkbox" [checked]="darkModeEnabled" (change)="toggleDarkMode()" />
-        <div class="switch"></div>
+      <label
+        class="toggle-theme"
+        title="Enable {{ mode }} mode"
+        (click)="toggleDarkMode()"
+      >
+        <span class="material-icons {{ mode.toLowerCase() }}">
+          {{ darkModeEnabled ? "wb_sunny" : "nights_stay" }}
+        </span>
       </label>
     </div>
     <div class="intro__2">
       <div [@stagger2] class="image-container">
         <ng-container *ngFor="let image of imagePaths">
-          <img [src]="image">
+          <img [src]="image" />
         </ng-container>
       </div>
     </div>
@@ -25,26 +35,38 @@
     <div class="content">
       <div class="card">
         <p class="text emphasize">
-          I'm a passionate Software Developer with an Industry experience of building web applications.<br><br> I
-          specialise
-          in Javascript
-          and have experience working with Angular.
+          I'm a passionate Software Developer with an Industry experience of
+          building web applications.<br /><br />
+          I specialise in Javascript and have experience working with Angular.
         </p>
 
         <ul class="text">
           <!-- <p>I've worked on various Frontend Projects for Web as well as Mobile Applications. <br>
             I have a potential to work in a challenging environment and create an impact.</p> -->
 
-          <li>Worked as an Angular Developer and have an experience of around 2 years.</li>
+          <li>
+            Worked as an Angular Developer and have an experience of around 2
+            years.
+          </li>
           <li>Good Knowledge of Javascript/TypeScript</li>
           <li>Used SASS for styling the Web pages</li>
-          <li>Used concepts like Observables, Promises for dealing with the Asynchronous data.</li>
-          <li>@Input and @Output variables for passing the data from child components and parent components.</li>
+          <li>
+            Used concepts like Observables, Promises for dealing with the
+            Asynchronous data.
+          </li>
+          <li>
+            @Input and @Output variables for passing the data from child
+            components and parent components.
+          </li>
           <li>NgRx for efficient global state management.</li>
-          <li>Use of Object oriented features while developing web applications.</li>
+          <li>
+            Use of Object oriented features while developing web applications.
+          </li>
         </ul>
-        <p class="text">Specialities: Angular, Javascript/Typescript, HTML, CSS/SASS, jQuery, Firebase, Android using
-          Core Java</p>
+        <p class="text">
+          Specialities: Angular, Javascript/Typescript, HTML, CSS/SASS, jQuery,
+          Firebase, Android using Core Java
+        </p>
 
         <p class="text">Current Focus: Frontend development using Angular</p>
       </div>
@@ -56,17 +78,15 @@
     <div class="content">
       <div [@stagger2]="imagePaths.length" class="image-container">
         <ng-container *ngFor="let image of imagePaths">
-          <img [src]="image">
+          <img [src]="image" />
         </ng-container>
       </div>
       <ng-container *ngFor="let skill of skills">
         <div class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                bar_chart
-              </span>
-              {{skill.name}}
+              <span class="companyImage material-icons"> bar_chart </span>
+              {{ skill.name }}
             </div>
           </div>
           <div class="card__content text" [innerHTML]="skill.innerHTML"></div>
@@ -75,7 +95,6 @@
     </div>
   </div>
 
-
   <div class="sections" id="experience">
     <div class="heading">Experience</div>
     <div class="content">
@@ -83,27 +102,24 @@
         <div class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                work
-              </span>
-              {{experience.companyName}}
+              <span class="companyImage material-icons"> work </span>
+              {{ experience.companyName }}
             </div>
           </div>
-          <div class="card__content text" [innerHTML]="experience.innerHTML"></div>
+          <div
+            class="card__content text"
+            [innerHTML]="experience.innerHTML"
+          ></div>
           <div class="card__footer">
             <div class="duration text">
-              <span class="companyImage material-icons">
-                show_chart
-              </span>
-              {{experience.duration}}
+              <span class="companyImage material-icons"> show_chart </span>
+              {{ experience.duration }}
             </div>
           </div>
         </div>
       </ng-container>
     </div>
-
   </div>
-
 
   <div class="sections" id="projects">
     <div class="heading">Projects</div>
@@ -112,16 +128,14 @@
         <div class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                developer_board
-              </span>
-              {{project.projectName}}
+              <span class="companyImage material-icons"> developer_board </span>
+              {{ project.projectName }}
             </div>
           </div>
           <div class="card__content text" [innerHTML]="project.innerHTML"></div>
           <div class="card__footer" *ngIf="project.link">
             <a class="duration text" [href]="project.link" target="_blank">
-              {{project.link}}
+              {{ project.link }}
             </a>
           </div>
         </div>
@@ -129,22 +143,20 @@
     </div>
   </div>
 
-
-
   <div class="sections" id="awards">
     <div class="heading">Awards</div>
     <div class="content">
       <div class="card">
         <div class="card__title">
-
           <div class="companyName text emphasize">
-            <span class="companyImage material-icons">
-              star
-            </span> Letter of Appreciation</div>
+            <span class="companyImage material-icons"> star </span> Letter of
+            Appreciation
+          </div>
         </div>
         <div class="card__content text">
-          Received a letter of Appreciation from the College faculty for developing the official BVICAM app and for
-          being a part of Android core team
+          Received a letter of Appreciation from the College faculty for
+          developing the official BVICAM app and for being a part of Android
+          core team
         </div>
       </div>
     </div>
@@ -157,19 +169,18 @@
         <div class="card">
           <div class="card__title">
             <div class="companyName text emphasize">
-              <span class="companyImage material-icons">
-                menu_book
-              </span>
-              {{education.companyName}}
+              <span class="companyImage material-icons"> menu_book </span>
+              {{ education.companyName }}
             </div>
           </div>
-          <div class="card__content text" [innerHTML]="education.innerHTML"></div>
+          <div
+            class="card__content text"
+            [innerHTML]="education.innerHTML"
+          ></div>
           <div class="card__footer">
             <div class="duration text">
-              <span class="companyImage material-icons">
-                show_chart
-              </span>
-              {{education.duration}}
+              <span class="companyImage material-icons"> show_chart </span>
+              {{ education.duration }}
             </div>
           </div>
         </div>
@@ -182,15 +193,25 @@
     <div class="content">
       <div class="card">
         <div class="card__content text">
-          <p>Email: sakshayphanda03@gmail.com</p><br>
-          <p>Linkedin: <a class="text"
-              href="https://www.linkedin.com/in/sakshay-phanda-b5a6977a">https://www.linkedin.com/in/sakshay-phanda-b5a6977a/</a>
-          </p><br>
-          <p>Github: <a class="text" href="https://github.com/sakshayphanda">https://github.com/sakshayphanda </a></p>
+          <p>Email: sakshayphanda03@gmail.com</p>
+          <br />
+          <p>
+            Linkedin:
+            <a
+              class="text"
+              href="https://www.linkedin.com/in/sakshay-phanda-b5a6977a"
+              >https://www.linkedin.com/in/sakshay-phanda-b5a6977a/</a
+            >
+          </p>
+          <br />
+          <p>
+            Github:
+            <a class="text" href="https://github.com/sakshayphanda"
+              >https://github.com/sakshayphanda
+            </a>
+          </p>
         </div>
-
       </div>
     </div>
   </div>
-
 </div>

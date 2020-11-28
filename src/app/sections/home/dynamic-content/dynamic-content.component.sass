@@ -2,215 +2,216 @@ $width: 60px
 $padding: 7px
 $height: $width / 2 + $padding
 
+.toggle-theme
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+
+    .material-icons
+        font-size: 2.5rem
+        transition: color 0.5s ease-in-out
+
+        &.light
+            color: white
+
+        &.dark
+            color: black
+
 .portfolio
-  height: 100%
-  width: 100%
-  background-image: var(--mainBackground)
-  transition: all 1s ease-in-out
-  background-size: cover
-  .intro
     height: 100%
     width: 100%
-    display: flex
-    flex-direction: column
-    &__1
-      flex: 1
-      display: flex
-      align-items: center
-      justify-content: center
-      flex-direction: column
-      .title
-        color: var(--titleColor)
-        font-size: 3.4rem
-        font-weight: 600
-        padding: 20px
-        transition: all 1s ease-in-out
-      .short-desc
-        font-size: 1.8rem
-        color: var(--titleColor)
-        transition: all 1s ease-in-out
+    background-image: var(--mainBackground)
+    transition: all 1s ease-in-out
+    background-size: cover
 
-
-    &__2
-      flex: 0.5
-      display: flex
-      justify-content: center
-      align-items: center
-      .image-container
+    .intro
+        height: 100%
         width: 100%
-        height: 90%
-        display: flex
-        justify-content: center
-        align-items: flex-end
-        flex-wrap: wrap
-        img
-          clip-path: circle()
-          height: 5em
-          margin: 10px
-          transition: margin 0.5s ease-in-out
-          &:hover
-            margin: 20px 10px
-            // animation: 10s linear rotate infinite
-
-  .sections
-    width: 100%
-    // background-image: var(--texturedBackground)
-    background: var(--sectionBackground)
-    background-repeat: round
-    transition: all .5s ease-in-out
-    .content
-      padding: 10px
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction: column
-      width: 100%
-      .card
-        width: 90%
-        box-shadow: var(--cardBoxShadow)
-        background: var(--cardBackground)
-        border-radius: 8px
-        transition: all .5s ease-in-out
         display: flex
         flex-direction: column
-        margin: 20px
-        padding: 10px
-        &__title
-          flex: 2
-          display: flex
-          align-items: center
-          color: var(--title)
-          border-bottom: 1px solid var(--border)
-          .companyImage
-            margin: 10px
-          .companyName
-            align-items: center
-            display: flex
-        &__content
-          flex: 6
-          padding: 20px
-        &__footer
-          flex: 2
-          min-height: 70px
-          display: flex
-          align-items: center
-          border-top: 1px solid var(--border)
 
-    .heading
-      height: 65px
-      color: white
-      padding: 20px
-      display: flex
-      align-items: center
-      font-size: 2rem
-      position: sticky
-      z-index: 1
-      top: 0
-      text-indent: 20px
-      // box-shadow: var(--sideBarBoxShadow)
+        &__1
+            flex: 1
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+
+            .title
+                color: var(--titleColor)
+                font-size: 3.4rem
+                font-weight: 600
+                padding: 20px
+                transition: all 1s ease-in-out
+
+            .short-desc
+                font-size: 1.8rem
+                color: var(--titleColor)
+                transition: all 1s ease-in-out
+
+        &__2
+            flex: 0.5
+            display: flex
+            justify-content: center
+            align-items: center
+
+            .image-container
+                width: 100%
+                height: 90%
+                display: flex
+                justify-content: center
+                align-items: flex-end
+                flex-wrap: wrap
+
+                img
+                    clip-path: circle()
+                    height: 5em
+                    margin: 10px
+                    transition: margin 0.5s ease-in-out
+
+                    &:hover
+                        margin: 20px 10px
+
+                        // animation: 10s linear rotate infinite
+
+    .sections
+        width: 100%
+
+        // background-image: var(--texturedBackground)
+        background: var(--sectionBackground)
+        background-repeat: round
+        transition: all 0.5s ease-in-out
+
+        .content
+            padding: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            width: 100%
+
+            .card
+                width: 90%
+                box-shadow: var(--cardBoxShadow)
+                background: var(--cardBackground)
+                border-radius: 8px
+                transition: all 0.5s ease-in-out
+                display: flex
+                flex-direction: column
+                margin: 20px
+                padding: 10px
+
+                &__title
+                    flex: 2
+                    display: flex
+                    align-items: center
+                    color: var(--title)
+                    border-bottom: 1px solid var(--border)
+
+                    .companyImage
+                        margin: 10px
+
+                    .companyName
+                        align-items: center
+                        display: flex
+
+                &__content
+                    flex: 6
+                    padding: 20px
+
+                &__footer
+                    flex: 2
+                    min-height: 70px
+                    display: flex
+                    align-items: center
+                    border-top: 1px solid var(--border)
+
+        .heading
+            height: 65px
+            color: white
+            padding: 20px
+            display: flex
+            align-items: center
+            font-size: 2rem
+            position: sticky
+            z-index: 1
+            top: 0
+            text-indent: 20px
+
+            // box-shadow: var(--sideBarBoxShadow)
+
 .image-container
-  width: 100%
-  height: 90%
-  display: flex
-  justify-content: center
-  align-items: flex-end
-  flex-wrap: wrap
-  img
-    clip-path: circle()
-    height: 3em
-    margin: 10px
-    &:hover
-      // animation: 5s linear rotate infinite
+    width: 100%
+    height: 90%
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    flex-wrap: wrap
+
+    img
+        clip-path: circle()
+        height: 3em
+        margin: 10px
+
+        &:hover
+            // animation: 5s linear rotate infinite
 
 .text
-  padding: 10px
-  font-size: 1.4rem
-  line-height: 1.6em
-  color: var(--cardTextColor)
+    padding: 10px
+    font-size: 1.4rem
+    line-height: 1.6em
+    color: var(--cardTextColor)
 
 .emphasize
-  font-size: 1.6rem
-  font-weight: 400
+    font-size: 1.6rem
+    font-weight: 400
 
 #about
-  .heading
-    background: var(--color-about)
+    .heading
+        background: var(--color-about)
 
 #projects
-  .heading
-    background: var(--color-projects)
+    .heading
+        background: var(--color-projects)
 
 #experience
-  .heading
-    background: var(--color-experience)
-
+    .heading
+        background: var(--color-experience)
 
 #skills
-  .heading
-    background: var(--color-skills)
+    .heading
+        background: var(--color-skills)
 
 #education
-  .heading
-    background: var(--color-education)
+    .heading
+        background: var(--color-education)
 
 #awards
-  .heading
-    background: var(--color-awards)
+    .heading
+        background: var(--color-awards)
 
 #contact
-  height: 100%
-  width: 100%
-  .heading
-    background: var(--color-contact)
+    height: 100%
+    width: 100%
 
-.switch-wrap
-  cursor: pointer
-  background: #15273b
-  padding: $padding
-  width: $width
-  height: $height
-  border-radius: $height / 2
-  margin: 10px
-  input
-    position: absolute
-    opacity: 0
-    width: 0
-    height: 0
-.switch
-  height: 100%
-  display: grid
-  grid-template-columns: 0fr 1fr 1fr
-  transition: .2s
-  //ICYMI, pseudo elements are treated as grid items
-  &::after
-    content: ''
-    border-radius: 50%
-    background: #ccc
-    grid-column: 2
-    transition: background .2s
-
-input:checked
-  + .switch
-    grid-template-columns: 1fr 1fr 0fr
-    &::after
-      background-color: #52cf71
+    .heading
+        background: var(--color-contact)
 
 @keyframes rotate
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(360deg)
+    0%
+        transform: rotate(0deg)
 
+    100%
+        transform: rotate(360deg)
 
-@media screen and ( max-width: 900px)
-  .image-container
-    img
-      height: 3em !important
+@media screen and (max-width: 900px)
+    .image-container
+        img
+            height: 3em !important
 
-@media screen and ( max-width: 700px)
-  .heading.chrome
-    top: 55px !important
+@media screen and (max-width: 700px)
+    .heading.chrome
+        top: 55px !important
 
-
-@media screen and ( max-width: 500px)
-
+@media screen and (max-width: 500px)
