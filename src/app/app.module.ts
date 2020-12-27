@@ -9,9 +9,6 @@ import { DynamicContentComponent } from './sections/home/dynamic-content/dynamic
 import { LoginComponent } from './sections/login/login.component';
 import { HomeComponent } from './sections/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import * as $ from 'jquery';
-
-
 @NgModule({
   declarations: [
     AppComponent,
