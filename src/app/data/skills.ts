@@ -1,6 +1,6 @@
 export const skills = [
   {
-    name: 'Languages/Frameworks/Libraries',
+    name: "Languages/Frameworks/Libraries",
     innerHTML: `
     <ul>
       <li>Angular</li>
@@ -12,39 +12,80 @@ export const skills = [
       <li>NodeJS</li>
     </ul>
     `,
-    duration: ''
+    icons: [
+      {
+        name: 'Angular',
+        url: '../../../../assets/angular-circle.png'
+      },
+      {
+        name: 'ReactJS/ReactNative',
+        url: '../../../../assets/reactjs.png'
+      },
+      {
+        name: 'NodeJS',
+        url: '../../../../assets/nodejs.png'
+      },
+      {
+        name: 'Javascript',
+        url: '../../../../assets/javascript.svg'
+      },
+      {
+        name: 'Typescript',
+        url: '../../../../assets/typescript.png'
+      },
+      {
+        name: 'MongoDB',
+        url: '../../../../assets/mongodb.png'
+      },
+    ],
+    duration: "",
   },
   {
-    name: 'HTMl',
+    name: "Template/StyleSheet",
     innerHTML: `
     <ul>
-    <li>BEM</li>
-    <li>Emmet</li>
-  </ul>
-    `,
-    duration: ''
-  },
-  {
-    name: 'StyleSheet',
-    innerHTML: `
-    <ul>
-    <li>CSS</li>
+    <l1>HTML<l1>
+    <l1>CSS</l1>
     <li>SASS</li>
     <li>SCSS</li>
   </ul>`,
-  duration: ''
+    duration: "",
+    icons: [
+      {
+        name: 'HTML',
+        url: '../../../../assets/html.jpg'
+      },
+      {
+        name: 'CSS',
+        url: '../../../../assets/css.png'
+      },
+      {
+        name: 'Sass',
+        url: '../../../../assets/sass.png'
+      },
+    ],
   },
   {
-    name: 'Database (NoSQL)',
+    name: "Database",
     innerHTML: `
     <ul>
-    <li>Firebase Database</li>
+    <li>Firebase</li>
     <li>MongoDB</li>
   </ul>`,
-  duration: ''
+    duration: "",
+    icons: [
+      {
+        name: 'Firebase',
+        url: '../../../../assets/firebase.jpeg'
+      },
+      {
+        name: 'MongoDB',
+        url: '../../../../assets/mongodb.png'
+      },
+    ],
   },
   {
-    name: 'Other',
+    name: "Other",
     innerHTML: `
     <ul>
     <li>Core Java</li>
@@ -53,6 +94,16 @@ export const skills = [
     <li>Bitbucket</li>
     <li>Github</li>
   </ul>`,
-  duration: ''
-  }
+    duration: "",
+    icons: [
+      {
+        name: 'Android',
+        url: '../../../../assets/android.png'
+      },
+      {
+        name: 'Github',
+        url: '../../../../assets/github.png'
+      }
+    ],
+  },
 ];

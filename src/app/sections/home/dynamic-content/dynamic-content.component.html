@@ -76,11 +76,6 @@
   <div class="sections" id="skills">
     <div class="heading">Skills</div>
     <div class="content">
-      <div [@stagger2]="imagePaths.length" class="image-container">
-        <ng-container *ngFor="let image of imagePaths">
-          <img [src]="image" />
-        </ng-container>
-      </div>
       <ng-container *ngFor="let skill of skills">
         <div class="card">
           <div class="card__title">
@@ -89,7 +84,14 @@
               {{ skill.name }}
             </div>
           </div>
-          <div class="card__content text" [innerHTML]="skill.innerHTML"></div>
+          <div class="skill-icons">
+            <ng-container *ngFor="let image of skill.icons">
+              <div class="icon-container">
+              <img [title]="image.name" [src]="image.url" />
+            </div>
+            </ng-container>
+          </div>
+          <!-- <div class="card__content text" [innerHTML]="skill.innerHTML"></div> -->
         </div>
       </ng-container>
     </div>
