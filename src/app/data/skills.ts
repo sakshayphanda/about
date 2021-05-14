@@ -1,10 +1,13 @@
 export const skills = [
   {
-    name: 'Javascript',
+    name: 'Languages/Frameworks/Libraries',
     innerHTML: `
     <ul>
       <li>Angular</li>
       <li>Typescript</li>
+      <li>Javascript</li>
+      <li>ReactJS</li>
+      <li>React Native</li>
       <li>JQuery</li>
       <li>NodeJS</li>
     </ul>

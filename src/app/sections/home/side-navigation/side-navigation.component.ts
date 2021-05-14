@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalDataService } from 'src/app/services/global-data.service';
 import { IActions } from '../../../interfaces/IActions';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-side-navigation',

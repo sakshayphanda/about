@@ -23,12 +23,12 @@ import { stagger3 } from 'src/app/animations/staggerRotate';
 export class DynamicContentComponent implements OnInit {
   imagePaths = [
     '../../../../assets/angular-circle.png',
+    '../../../../assets/reactjs.png',
     '../../../../assets/javascript.svg',
     '../../../../assets/typescript.png',
-    '../../../../assets/jquery.png',
-    '../../../../assets/html.jpg',
+    '../../../../assets/nodejs.png',
     '../../../../assets/sass.png',
-    '../../../../assets/css.png',
+    '../../../../assets/mongodb.png',
   ];
   experiences: IExperience[] = experiences;
   skills: ISkill[] = skills;
