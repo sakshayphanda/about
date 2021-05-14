@@ -34,9 +34,9 @@ export const skills = [
         url: '../../../../assets/typescript.png'
       },
       {
-        name: 'MongoDB',
-        url: '../../../../assets/mongodb.png'
-      },
+        name: 'Java',
+        url: '../../../../assets/java.png'
+      }
     ],
     duration: "",
   },
