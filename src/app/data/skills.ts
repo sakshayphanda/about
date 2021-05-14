@@ -25,9 +25,10 @@ export const skills = [
     duration: ''
   },
   {
-    name: 'CSS',
+    name: 'StyleSheet',
     innerHTML: `
     <ul>
+    <li>CSS</li>
     <li>SASS</li>
     <li>SCSS</li>
   </ul>`,
