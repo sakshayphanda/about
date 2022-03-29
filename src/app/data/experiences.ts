@@ -6,7 +6,7 @@ export const experiences = [
       Lead Frontend; Fullstack Developer
       </p>
     `,
-    duration: 'Oct 2020 - Oct 2021'
+    duration: 'Oct 2021 - Present'
   },
   {
     companyName: 'Publicis Sapient',

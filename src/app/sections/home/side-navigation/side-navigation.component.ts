@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 import { GlobalDataService } from 'src/app/services/global-data.service';
 import { IActions } from '../../../interfaces/IActions';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-side-navigation',
@@ -72,7 +72,7 @@ export class SideNavigationComponent implements OnInit {
   actionChanged($event, id) {
     $event.stopPropagation();
     if (id === 'resume') {
-      window.open('../../../../assets/Resume-sakshayphanda.docx', '_blank');
+      window.open('../../../../assets/sakshayphandaresume.pdf', '_blank');
       return;
     }
    // this.selectedAction = id;
