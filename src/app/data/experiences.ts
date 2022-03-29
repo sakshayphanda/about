@@ -1,19 +1,27 @@
 export const experiences = [
   {
+    companyName: 'Nagarro',
+    innerHTML: `
+      <p>
+      Lead Frontend; Fullstack Developer
+      </p>
+    `,
+    duration: 'Oct 2020 - Oct 2021'
+  },
+  {
     companyName: 'Publicis Sapient',
     innerHTML: `
       <p>
-      I have been working as a Frontend Developer.
+      Frontend Developer.
       </p>
     `,
-    duration: 'Oct 2020 - Present'
+    duration: 'Oct 2020 - Oct 2021'
   },
   {
-    companyName: 'Centilytics',
+    companyName: 'Progressive Infotech Pvt. Ltd.',
     innerHTML: `
       <p>
-      Worked as an Angular Developer on a product named Centilytics since August 2018.
-      I Started working on this project from the first week itself and got a good amount of experience in Angular Framework.
+      Angular Developer
       </p>
     `,
     duration: 'August 2018 - Oct 2020'
