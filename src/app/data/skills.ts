@@ -39,7 +39,7 @@ export const skills = [
       },
       {
         name: 'Python',
-        url: '../../../../assets/python.jpeg'
+        url: '../../../../assets/python.png'
       }
     ],
     duration: "",
