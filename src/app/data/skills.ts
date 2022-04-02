@@ -36,6 +36,10 @@ export const skills = [
       {
         name: 'Java',
         url: '../../../../assets/java.png'
+      },
+      {
+        name: 'Python',
+        url: '../../../../assets/python.jpeg'
       }
     ],
     duration: "",
@@ -81,6 +85,10 @@ export const skills = [
       {
         name: 'MongoDB',
         url: '../../../../assets/mongodb.png'
+      },
+      {
+        name: 'PostgreSQL',
+        url: '../../../../assets/PostgreSQL.png'
       },
     ],
   },
