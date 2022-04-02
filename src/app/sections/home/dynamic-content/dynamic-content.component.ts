@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalDataService } from 'src/app/services/global-data.service';
-import { experiences } from 'src/app/data/experiences';
-import { skills } from 'src/app/data/skills';
-import { projects } from 'src/app/data/projects';
-import { education } from 'src/app/data/education';
-import { ISkill } from 'src/app/interfaces/ISkill';
-import { IProject } from 'src/app/interfaces/IProject';
-import { IExperience } from 'src/app/interfaces/IExperience';
-import { IEducation } from 'src/app/interfaces/IEducation';
 import { fade } from 'src/app/animations/fade';
+import { slide } from 'src/app/animations/slide';
 import { stagger1 } from 'src/app/animations/stagger';
 import { stagger2 } from 'src/app/animations/stagger2';
-import { slide } from 'src/app/animations/slide';
 import { stagger3 } from 'src/app/animations/staggerRotate';
+import { education } from 'src/app/data/education';
+import { experiences } from 'src/app/data/experiences';
+import { projects } from 'src/app/data/projects';
+import { skills } from 'src/app/data/skills';
+import { IEducation } from 'src/app/interfaces/IEducation';
+import { IExperience } from 'src/app/interfaces/IExperience';
+import { IProject } from 'src/app/interfaces/IProject';
+import { ISkill } from 'src/app/interfaces/ISkill';
+import { GlobalDataService } from 'src/app/services/global-data.service';
 
 @Component({
   selector: 'app-dynamic-content',
@@ -29,6 +29,7 @@ export class DynamicContentComponent implements OnInit {
     '../../../../assets/nodejs.png',
     '../../../../assets/sass.png',
     '../../../../assets/mongodb.png',
+    '../../../../assets/python.png',
   ];
   experiences: IExperience[] = experiences;
   skills: ISkill[] = skills;
