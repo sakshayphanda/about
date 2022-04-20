@@ -1,15 +1,19 @@
 <div class="container">
-
   <div class="image-container">
-    <p class="email">Sakshay<br>Phanda</p>
+    <p class="email">Sakshay<br />Phanda</p>
     <!-- <div class="short-desc">MEAN Stack Developer</div> -->
   </div>
 
   <ng-container *ngFor="let action of actions">
-    <div (click)="actionChanged($event, action.id)"  class="action {{action.id === selectedAction ? action.id + 'Selected selected' : false}}">
-      <span class="material-icons {{action.id}}">
-        {{action.icon}}
-        </span>{{ action.name}}
-      </div>
+    <div
+      (click)="actionChanged($event, action.id)"
+      class="action {{
+        action.id === selectedAction ? action.id + 'Selected selected' : false
+      }}"
+    >
+      <span class="material-icons {{ action.id }}">
+        {{ action.icon }} </span
+      >{{ action.name }}
+    </div>
   </ng-container>
 </div>
